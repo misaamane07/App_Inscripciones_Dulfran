@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
             this.btn_Nuevo = new System.Windows.Forms.PictureBox();
             this.ptb_Imagen = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Consultar)).BeginInit();
@@ -307,6 +309,7 @@
             this.btn_Consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Consultar.TabIndex = 27;
             this.btn_Consultar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btn_Consultar, "Consultar");
             // 
             // btn_Actualizar
             // 
@@ -317,6 +320,7 @@
             this.btn_Actualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Actualizar.TabIndex = 26;
             this.btn_Actualizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btn_Actualizar, "Actualizar");
             // 
             // btn_Guardar
             // 
@@ -327,6 +331,8 @@
             this.btn_Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Guardar.TabIndex = 25;
             this.btn_Guardar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btn_Guardar, "Registrar candidato");
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // btn_Nuevo
             // 
@@ -337,6 +343,8 @@
             this.btn_Nuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Nuevo.TabIndex = 24;
             this.btn_Nuevo.TabStop = false;
+            this.toolTip1.SetToolTip(this.btn_Nuevo, "Nuevo candidato");
+            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
             // 
             // ptb_Imagen
             // 
@@ -347,6 +355,7 @@
             this.ptb_Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptb_Imagen.TabIndex = 23;
             this.ptb_Imagen.TabStop = false;
+            this.ptb_Imagen.Click += new System.EventHandler(this.ptb_Imagen_Click);
             // 
             // Form1
             // 
@@ -432,6 +441,7 @@
         private System.Windows.Forms.PictureBox btn_Actualizar;
         private System.Windows.Forms.PictureBox btn_Consultar;
         private System.Windows.Forms.PictureBox btn_Home;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
