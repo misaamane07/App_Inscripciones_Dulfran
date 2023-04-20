@@ -48,6 +48,7 @@ namespace Presentacion
         }
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
+           
             MemoryStream ms = new MemoryStream();
             ptb_Imagen.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
@@ -75,6 +76,18 @@ namespace Presentacion
                 }
             }
             catch { }
+        }
+        private void fnt_Consultar(string id)
+        {
+            cls_ConsultarCandidato obj_Consultar = new cls_ConsultarCandidato();
+            obj_Consultar.fnt_Consultar(id);
+            ptb_Imagen.Image = obj_Consultar.getBmp();
+            txt_PNombre.Text = obj_Consultar.getPNombre();
+            txt_SNombre.Text = obj_Consultar.getSNombre();
+        }
+        private void btn_Consultar_Click(object sender, EventArgs e)
+        {
+            fnt_Consultar(txt_ID.Text);
         }
     }
 }

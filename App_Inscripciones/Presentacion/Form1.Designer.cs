@@ -303,20 +303,21 @@
             // btn_Consultar
             // 
             this.btn_Consultar.Image = global::Presentacion.Properties.Resources.consulta__2_;
-            this.btn_Consultar.Location = new System.Drawing.Point(665, 391);
+            this.btn_Consultar.Location = new System.Drawing.Point(667, 353);
             this.btn_Consultar.Name = "btn_Consultar";
-            this.btn_Consultar.Size = new System.Drawing.Size(71, 77);
+            this.btn_Consultar.Size = new System.Drawing.Size(54, 59);
             this.btn_Consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Consultar.TabIndex = 27;
             this.btn_Consultar.TabStop = false;
             this.toolTip1.SetToolTip(this.btn_Consultar, "Consultar");
+            this.btn_Consultar.Click += new System.EventHandler(this.btn_Consultar_Click);
             // 
             // btn_Actualizar
             // 
             this.btn_Actualizar.Image = global::Presentacion.Properties.Resources.actualizar__2_;
-            this.btn_Actualizar.Location = new System.Drawing.Point(588, 391);
+            this.btn_Actualizar.Location = new System.Drawing.Point(607, 353);
             this.btn_Actualizar.Name = "btn_Actualizar";
-            this.btn_Actualizar.Size = new System.Drawing.Size(71, 77);
+            this.btn_Actualizar.Size = new System.Drawing.Size(54, 59);
             this.btn_Actualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Actualizar.TabIndex = 26;
             this.btn_Actualizar.TabStop = false;
@@ -325,9 +326,9 @@
             // btn_Guardar
             // 
             this.btn_Guardar.Image = global::Presentacion.Properties.Resources.salvar__1_;
-            this.btn_Guardar.Location = new System.Drawing.Point(664, 308);
+            this.btn_Guardar.Location = new System.Drawing.Point(667, 288);
             this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(71, 77);
+            this.btn_Guardar.Size = new System.Drawing.Size(54, 59);
             this.btn_Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Guardar.TabIndex = 25;
             this.btn_Guardar.TabStop = false;
@@ -337,9 +338,9 @@
             // btn_Nuevo
             // 
             this.btn_Nuevo.Image = global::Presentacion.Properties.Resources.agregar_usuario;
-            this.btn_Nuevo.Location = new System.Drawing.Point(588, 308);
+            this.btn_Nuevo.Location = new System.Drawing.Point(607, 288);
             this.btn_Nuevo.Name = "btn_Nuevo";
-            this.btn_Nuevo.Size = new System.Drawing.Size(71, 77);
+            this.btn_Nuevo.Size = new System.Drawing.Size(54, 59);
             this.btn_Nuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Nuevo.TabIndex = 24;
             this.btn_Nuevo.TabStop = false;
