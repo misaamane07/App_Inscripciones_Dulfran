@@ -84,6 +84,14 @@ namespace Presentacion
             ptb_Imagen.Image = obj_Consultar.getBmp();
             txt_PNombre.Text = obj_Consultar.getPNombre();
             txt_SNombre.Text = obj_Consultar.getSNombre();
+            txt_PApellido.Text = obj_Consultar.getPApellido();
+            txt_SApellido.Text = obj_Consultar.getSApellido();
+            txt_Contacto.Text = obj_Consultar.getContacto();
+            txt_Acudientes.Text = obj_Consultar.getAcudientes();
+            txt_Correo.Text = obj_Consultar.getCorreo();
+            txt_Direccion.Text = obj_Consultar.getDireccion();
+            txt_Edad.Text = obj_Consultar.getEdad();
+            cbx_Estudio.SelectedIndex = obj_Consultar.getEstudio() - 1;
         }
         private void btn_Consultar_Click(object sender, EventArgs e)
         {
