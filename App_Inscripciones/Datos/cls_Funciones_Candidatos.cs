@@ -2,6 +2,7 @@
 using MySqlX.XDevAPI.Relational;
 using System;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.IO;
 using System.Runtime.Remoting.Messaging;
@@ -27,18 +28,24 @@ namespace Datos
             string p_apellido, string s_apellido,string contacto, string direccion,
             string correo, string edad, int estudio, string acudientes, byte[] imagen)
         {
-            try
-            {
                 cls_Conexion obj_conexion = new cls_Conexion();
                 obj_conexion.fnt_Conectar();
-                string consulta = "insert into tbl_personas(PKId,P_Nombre,S_Nombre," +
-                    "P_Apellido,S_Apellido,Contacto,Dirección,Correo,Edad,FKCodigo_tbl_nivelestudio,Acudiente, Imagen)" +
-                    "values ('"+id+"','"+p_nombre+"','"+s_nombre+"','"+p_apellido+"','"+s_apellido+"','"+contacto+"','"+direccion+"'," +
-                    "'"+correo+"','"+edad+"','"+estudio+"','"+acudientes+"','"+imagen+"')";
-                MySqlCommand comando = new MySqlCommand(consulta, obj_conexion.conex);
-                MySqlDataReader lectura = comando.ExecuteReader();
+                string comando = "insert into tbl_personas values (@PKId,@P_Nombre,@S_Nombre,@P_Apellido,@S_Apellido,@Contacto,@Dirección,@Correo,@edad,@FKCodigo_tbl_nivelestudio,@Acudiente,@Imagen)";
+                MySqlCommand cmd = new MySqlCommand(comando, obj_conexion.conex);
+                cmd.Parameters.AddWithValue("@PKId", id);
+                cmd.Parameters.AddWithValue("@P_Nombre", p_nombre);
+                cmd.Parameters.AddWithValue("@S_Nombre", s_nombre);
+                cmd.Parameters.AddWithValue("@P_Apellido", p_apellido);
+                cmd.Parameters.AddWithValue("@S_Apellido", s_apellido);
+                cmd.Parameters.AddWithValue("@Contacto", contacto);
+                cmd.Parameters.AddWithValue("@Dirección", direccion);
+                cmd.Parameters.AddWithValue("@Correo", correo);
+                cmd.Parameters.AddWithValue("@Edad", edad);
+                cmd.Parameters.AddWithValue("@FKCodigo_tbl_nivelestudio", estudio);
+                cmd.Parameters.AddWithValue("@Acudiente", acudientes);
+                cmd.Parameters.AddWithValue("@Imagen", imagen);
+                cmd.ExecuteNonQuery();
                 obj_conexion.fnt_Desconectar();
-            }catch(Exception) { }
         }
         public void fnt_CargarNivelEstudio()
         {
